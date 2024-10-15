@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.coco.movieproject.mapper.MovieMapper">
+
+    <resultMap id="BaseResultMap" type="com.coco.movieproject.entity.Movie">
+            <id property="movieId" column="movie_id" jdbcType="INTEGER"/>
+            <result property="title" column="title" jdbcType="VARCHAR"/>
+            <result property="genre" column="genre" jdbcType="VARCHAR"/>
+            <result property="director" column="director" jdbcType="VARCHAR"/>
+            <result property="cast" column="cast" jdbcType="VARCHAR"/>
+            <result property="duration" column="duration" jdbcType="INTEGER"/>
+            <result property="releaseDate" column="release_date" jdbcType="DATE"/>
+            <result property="rating" column="rating" jdbcType="DECIMAL"/>
+            <result property="language" column="language" jdbcType="VARCHAR"/>
+            <result property="description" column="description" jdbcType="VARCHAR"/>
+            <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
+            <result property="updatedAt" column="updated_at" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        movie_id,title,genre,
+        director,cast,duration,
+        release_date,rating,language,
+        description,created_at,updated_at
+    </sql>
+</mapper>

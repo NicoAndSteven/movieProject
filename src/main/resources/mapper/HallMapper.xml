@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.coco.movieproject.mapper.HallMapper">
+
+    <resultMap id="BaseResultMap" type="com.coco.movieproject.entity.Hall">
+            <id property="hallId" column="hall_id" jdbcType="INTEGER"/>
+            <result property="cinemaId" column="cinema_id" jdbcType="INTEGER"/>
+            <result property="hallName" column="hall_name" jdbcType="VARCHAR"/>
+            <result property="capacity" column="capacity" jdbcType="INTEGER"/>
+            <result property="hallType" column="hall_type" jdbcType="OTHER"/>
+            <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
+            <result property="updatedAt" column="updated_at" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        hall_id,cinema_id,hall_name,
+        capacity,hall_type,created_at,
+        updated_at
+    </sql>
+</mapper>

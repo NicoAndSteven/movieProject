@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.coco.movieproject.mapper.ReviewsMapper">
+
+    <resultMap id="BaseResultMap" type="com.coco.movieproject.entity.Reviews">
+            <id property="reviewId" column="review_id" jdbcType="INTEGER"/>
+            <result property="userId" column="user_id" jdbcType="INTEGER"/>
+            <result property="movieId" column="movie_id" jdbcType="INTEGER"/>
+            <result property="rating" column="rating" jdbcType="DECIMAL"/>
+            <result property="reviewText" column="review_text" jdbcType="VARCHAR"/>
+            <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
+            <result property="updatedAt" column="updated_at" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        review_id,user_id,movie_id,
+        rating,review_text,created_at,
+        updated_at
+    </sql>
+</mapper>

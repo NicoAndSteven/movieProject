@@ -1,0 +1,16 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /movie
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/movie?useUnicode=true&characterEncoding=utf-8
+
+#配置日志
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
